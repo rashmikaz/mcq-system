@@ -20,7 +20,7 @@ export const saveUser = createAsyncThunk(
   }
 );
 
-const userSlice = createSlice({
+const UserSlice = createSlice({
   name: "user",
   initialState,
   reducers: {},
@@ -35,4 +35,4 @@ const userSlice = createSlice({
   },
 });
 
-export default userSlice.reducer;
+export default UserSlice.reducer;
