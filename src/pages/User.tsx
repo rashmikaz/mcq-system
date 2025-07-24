@@ -3,8 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { saveUser } from "../reducers/UserSlice";
 import { AppDispatch } from "../store/Store";
 import { UserModel } from "../model/UserModel";
+import { useNavigate } from "react-router-dom";
 
 function User() {
+  const navigate = useNavigate();
+
   const dispatch = useDispatch<AppDispatch>();
   const users = useSelector((state) => state.users);
 
@@ -73,7 +76,10 @@ function User() {
       </div>
 
       <div className="flex justify-end">
-        <button className="bg-cyan-500 shadow-lg shadow-cyan-500/50 absolute right-111 bottom-70 text-white px-4 py-2 rounded">
+        <button
+          onClick={() => navigate("/dashboard")}
+          className="bg-cyan-500 shadow-lg shadow-cyan-500/50 absolute right-111 bottom-70 text-white px-4 py-2 rounded"
+        >
           Dashboard
         </button>
       </div>

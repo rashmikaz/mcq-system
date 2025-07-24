@@ -1,11 +1,15 @@
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 import User from "./pages/User";
 
 function App() {
   return (
-    <>
-      <User />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<User />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
