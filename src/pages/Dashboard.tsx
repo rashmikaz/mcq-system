@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="absolute top-10 left-10 size-10 w-200">
@@ -15,7 +18,10 @@ function Dashboard() {
         <img src="src/assets/image.jpg" alt="Banner" width="800" height="800" />
       </div>
 
-      <div className="bg-white rounded-lg px-6 py-8 ring shadow-xl w-40 h-30 absolute top-50 right-315 size-18">
+      <div
+        onClick={() => navigate("/exam")}
+        className="bg-white rounded-lg px-6 py-8 ring shadow-xl w-40 h-30 absolute top-50 right-315 size-18"
+      >
         <h3 className="text-gray-900 absolute bottom-18">
           java script foundation exam
         </h3>
