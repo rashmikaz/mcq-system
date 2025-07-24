@@ -1,8 +1,13 @@
 import React from "react";
 import "./App.css";
+import User from "./pages/User";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <User />
+    </>
+  );
 }
 
 export default App;
